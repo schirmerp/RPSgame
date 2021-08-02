@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <script>
+         let cPick;
+         let pScore;
+         let cScore;
+         
+         function comPlay () {
+            cPick =  Math.floor(Math.random()*3);
+            return cPick;
+         }
+                
+            
+        let player; 
+        function gameGo (){ 
+        player = prompt("Select a method of execution");
+
+        if (player == 1) {
+            window.alert("Rock");
+        } else if (player==2){
+            window.alert("Paper");
+        } else if (player==3){
+            window.alert("Scissors");
+        } else { 
+            player = prompt("Select a method of execution");
+        }
+        return player;    
+        fight();
+        }
+            
+        function fight (player, cPick) {
+            if (player == 1 && cPick == 1){
+                alert("Tie, No points scored");
+            }
+            else if(player == 1 && cPick == 2){
+                alert("Paper Covers Rock! Computer gets 1 Point");
+                cScore ++;
+                return cScore;
+            }
+            else if(player == 1 && cPick == 3) {
+                alert("Rock CRUSHES scissors, 2Player 1 Point!" );
+                pScore ++;
+                return pScore;
+            }
+            else if(player == 2 && cPick == 1) {
+                alert("Paper Covers Rock! Player gets 1 Point");
+                pScore ++;
+                return pScore;
+            }
+            else if(player == 2 && cPick == 2){
+                alert("Tie, No points scored");
+            }
+            else if(player == 2 && cPick == 3) {
+                alert("Scissors cuts Paper! Computer gets 1 point!");
+                cScore ++;
+                return cScore;
+            }
+            else if(player == 3 && cPick == 1){
+                alert("Rock CRUSHES scissors, Computer 1 Point!" );
+                cScore ++;
+                return cScore;
+            }
+            else if(player == 3 && cPick == 2){
+                alert("Scissors cuts Paper, Player 1 Point!" );
+                pScore ++;
+                return pScore;
+            }
+            else if(player == 3 && cPick == 3){
+                alert("Tie no points scored");
+            
+            }
+            
+        }
+        </script>
+
+    </head>
+    <body>
+items :      
+player
+computer
+rock 1 
+paper 2 
+scissors 3
+player wins amount
+computer wins amount
+
+game results:
+if rock 1
+scissors loses 3
+paper wins 2
+
+
+if paper 2
+rock loses 1
+scissors wins 3
+
+if scissors 3
+paper loses 2 
+rock wins 1
+
+    </body>
+</html>
